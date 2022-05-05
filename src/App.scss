@@ -1,0 +1,65 @@
+.Wrapper {
+  display: grid;
+
+  grid-template-areas:
+          "header header"
+          "nav main";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  /* grid-gap: 10px; */
+
+  height: 500px;
+}
+
+.Header {
+  grid-area: header;
+  background-color: lightcoral;
+  border-bottom: 4px solid black;
+}
+
+.Header img {
+  height: 100%;
+}
+
+.Nav {
+  grid-area: nav;
+  background-color: lightgreen;
+}
+
+.Main {
+  grid-area: main;
+  background-color: lightblue;
+
+  display: grid;
+  grid-template-areas:
+          "hero"
+          "profile"
+          "posts"
+          "messages";
+
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.posts {
+  grid-area: posts;
+}
+
+.messages {
+  grid-area: messages;
+}
